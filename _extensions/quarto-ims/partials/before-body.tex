@@ -1,0 +1,40 @@
+$-- Implements the frontmatter, title page, and abstract.
+$--
+$-- %%%% TODO %%%%%
+$-- Customize is needed, otherwise remove this partials to use Quarto default one
+$-- %%%%%%%%%%%%%%%%
+$if(has-frontmatter)$
+\frontmatter
+$endif$
+$if(title)$
+$if(beamer)$
+\frame{\titlepage}
+$else$
+\maketitle
+$endif$
+$endif$
+
+$if(semester)$
+\def\headright{$semester$}
+$else$
+\def\headright{\number\year}
+$endif$
+
+
+\newcommand{\docversion}{\texttt{v8.2024.09.16}}
+\newcommand{\titletext}{\title}
+
+
+
+$if(subtitle)$
+\def\headleft{$subtitle$ -- \docversion}
+$else$
+\def\headleft{\docversion}
+$endif$
+
+\ihead{\headleft}
+\ohead{\headright\ | Nova IMS}
+\ifoot{Master in Data Science and Advanced Analytics}
+\cfoot{}
+\ofoot{\thepage}
+

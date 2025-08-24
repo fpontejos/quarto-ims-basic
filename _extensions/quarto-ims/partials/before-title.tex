@@ -1,0 +1,75 @@
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+% \usepackage{showframe} % 
+% <=============================================
+
+
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{lipsum}
+
+\usepackage[charter]{mathdesign}
+% \usepackage[lf,t]{FiraSans}
+
+
+\usepackage{sourcecodepro}
+\usepackage{sourcesanspro}
+
+
+
+\usepackage{scrlayer-scrpage}
+
+\PassOptionsToPackage{hidelinks,pdfusetitle}{hyperref}
+
+\usepackage{enumitem}
+
+
+\usepackage[a4paper,
+	left=2.0cm, right=2.0cm, 
+	top=3cm, bottom=3cm,
+	headsep=1cm,
+	footskip=1.5cm,
+	% headheight=5cm,
+	% footskip = \dimexpr\headsep+\ht\strutbox\relax,
+	% tmargin = 0mm,
+	bmargin = 3cm%\dimexpr17mm+2\ht\strutbox\relax,
+]{geometry}
+
+% shift foot down
+\ModifyLayer[addvoffset=.6ex]{scrheadings.foot.odd}
+\ModifyLayer[addvoffset=.6ex]{scrheadings.foot.even}
+\ModifyLayer[addvoffset=.6ex]{scrheadings.foot.oneside}
+\ModifyLayer[addvoffset=.6ex]{plain.scrheadings.foot.odd}
+\ModifyLayer[addvoffset=.6ex]{plain.scrheadings.foot.even}
+\ModifyLayer[addvoffset=.6ex]{plain.scrheadings.foot.oneside}
+
+
+\usepackage{multicol}
+\setlength\columnsep{20pt}
+
+
+
+
+\setkomafont{pagehead}{\normalfont\normalcolor\upshape\footnotesize}
+\setkomafont{pagefoot}{\normalfont\normalcolor\upshape\footnotesize}
+\renewcommand{\arraystretch}{2}
+
+\renewcommand{\labelitemi}{-}
+\setlist{leftmargin=12pt}
+
+$if(author)$
+\author{$for(by-author)$$by-author.name.literal$$sep$, $endfor$}
+$endif$
+
+
+\usepackage[style=apa]{biblatex}
+
+%% PAGE BREAKING to avoid widows and orphans
+\clubpenalty = 2000
+\widowpenalty = 2000
+\usepackage{microtype}

@@ -1,0 +1,117 @@
+---
+title: Title Demonstrating Basic Template
+subtitle: Example Document Subtitle
+format:
+  quarto-ims-pdf:
+    keep-tex: true  
+
+author:
+  - name: Farina Pontejos
+bibliography: bibliography.bib  
+semester: Fall Semester 2025-2026
+version: v1.2025.08.23
+
+---
+
+## Research Problem
+
+Culinary presentation assessment remains subjective and inconsistent across NovaChef competitions globally. While visual arts experts and celebrity chefs traditionally evaluate dish aesthetics using Plating Precision Ratings, recent advances in computer vision AI suggest potential for standardized, objective scoring through systems like FlavorVision-X. @fig-pydemo is an example of referencing a figure, while @fig-placeholder is a placeholder.
+
+::: {#fig-placeholder}
+{{< placeholder 200 100 >}}
+
+Placeholder figure.
+:::
+
+However, the cultural and artistic nuances of food presentation may be difficult for algorithms to capture, potentially missing the emotional and creative elements that human experts recognize in award-winning dishes. @CameronTrivedi2013
+
+
+*Note: This is a completely fictional research example created for educational purposes. NovaChef Studios and other organization names mentioned are imaginary organizations. Any resemblance to existing organizations is purely coincidental.*
+
+### Embedding Python Viz
+
+::: {#fig-pydemo}
+
+```{python}
+#| fig-cap: "Caption: Demo of Python-Generated Plots"
+#| fig-subcap: 
+#|   - "First"
+#|   - "Second"
+#| layout-ncol: 2
+
+import matplotlib.pyplot as plt
+plt.plot([1,23,2,4])
+plt.show()
+
+plt.plot([8,65,23,90])
+plt.show()
+```
+
+This is the super-figure caption
+
+:::
+
+{{< lipsum 2 >}}
+
+### Flowcharts 
+
+::: {#fig-merm}
+
+```{mermaid}
+%%| fig-cap: "This is a simple mermaid graph."
+
+flowchart LR
+  A[Hard edge] --> B(Round edge)
+  B --> C{Decision}
+  C --> D[Result one]
+  C --> E[Result two]
+
+
+```
+We can also render Mermaid.js charts. 
+
+:::
+
+{{< lipsum 2 >}}
+
+### Equations
+
+Let $x$ denote the number of eruptions in a year. Then, $x$ can be modeled by a Poisson distribution
+
+$$
+p(x) = \frac{e^{-\lambda} \lambda^{x}}{x !}
+$$ {#eq-poisson}
+
+where $\lambda$ is the rate of eruptions per year. Using @eq-poisson, the probability of an eruption in the next $t$ years can be calculated.
+
+Now I want to force the next part to go to a new page.
+
+{{< pagebreak >}}
+
+### Tables
+
+What about tables, you ask? Here's @tbl-history for you!
+
+
+| Name                 | Year   |
+| -------------------- | ------ |
+| Current              | 2021   |
+| Teneguía             | 1971   |
+| Nambroque            | 1949   |
+| El Charco            | 1712   |
+| Volcán San Antonio   | 1677   |
+| Volcán San Martin    | 1646   |
+| Tajuya near El Paso  | 1585   |
+| Montaña Quemada      | 1492   |
+
+: Recent historic eruptions on La Palma {#tbl-history}
+
+## The rest of this is just Lorem Ipsum
+
+{{< lipsum 4 >}}
+
+
+## References
+
+::: {#refs}
+:::
