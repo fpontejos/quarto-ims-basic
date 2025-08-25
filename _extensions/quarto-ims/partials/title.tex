@@ -32,7 +32,11 @@ $endif$
     \lineskip .5em%
     \begin{tabular}[t]{c}%
     \textmd \@subtitle
-    \end{tabular}\par}%
+    \end{tabular}\par%
+    $if(semester)${$semester$}
+    \vskip 1em%
+    $endif$
+    }%
     $endif$
 
     

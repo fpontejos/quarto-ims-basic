@@ -20,8 +20,13 @@ $else$
 \def\headright{\number\year}
 $endif$
 
+\newcommand{\docversion}{
+$if(version)$\texttt{$version$}
+$else$
+\@date
+$endif$
+}
 
-\newcommand{\docversion}{\texttt{v8.2024.09.16}}
 \newcommand{\titletext}{\title}
 
 
