@@ -4,6 +4,9 @@ subtitle: Example Document Subtitle
 format:
   quarto-ims-pdf:
     keep-tex: true  
+    cite-method: biblatex
+
+      
 
 author:
   - name: Farina Pontejos
@@ -23,7 +26,7 @@ Culinary presentation assessment remains subjective and inconsistent across Nova
 Placeholder figure.
 :::
 
-However, the cultural and artistic nuances of food presentation may be difficult for algorithms to capture, potentially missing the emotional and creative elements that human experts recognize in award-winning dishes. @CameronTrivedi2013
+However, the cultural and artistic nuances of food presentation may be difficult for algorithms to capture, potentially missing the emotional and creative elements that human experts recognize in award-winning dishes. A parenthetical citation looks like this [@CameronTrivedi2013], while in-text looks like thus: @CameronTrivedi2013.
 
 
 *Note: This is a completely fictional research example created for educational purposes. NovaChef Studios and other organization names mentioned are imaginary organizations. Any resemblance to existing organizations is purely coincidental.*
